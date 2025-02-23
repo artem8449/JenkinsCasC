@@ -5,3 +5,4 @@ gradle
 workflow-aggregator
 job-dsl
 pipeline-utility-steps
+ssh-slaves
