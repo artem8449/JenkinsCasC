@@ -36,6 +36,10 @@ credentials:
                 -----END RSA PRIVATE KEY-----
           scope: GLOBAL
           username: "jenkins"
+      - string:
+          id: "gitlab-api-token"
+          scope: GLOBAL
+          secret: "your-gitlab-api-token"
 jenkins:
   agentProtocols:
   - "JNLP4-connect"
@@ -129,6 +133,12 @@ security:
   globalJobDslSecurityConfiguration:
     useScriptSecurity: true
 unclassified:
+  gitLabServers:
+    servers:
+      - name: "GitLab"
+        serverUrl: "http://localhost:8081"  # Внешний доступ к GitLab
+        credentialsId: "gitlab-token"       # ID токена для авторизации
+        clientBuilderId: "auto"
   buildDiscarders:
     configuredBuildDiscarders:
     - "jobBuildDiscarder"
