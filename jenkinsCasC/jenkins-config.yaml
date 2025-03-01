@@ -41,6 +41,8 @@ credentials:
           scope: GLOBAL
           secret: "glpat-1ryEmtEWTLpf1U-vBLga"
 jenkins:
+  agentProtocols:
+    - JNLP4-connect
   crumbIssuer:
     standard:
       excludeClientIPFromCrumb: false
@@ -130,7 +132,7 @@ security:
   globalJobDslSecurityConfiguration:
     useScriptSecurity: true
 unclassified:
-  gitLabServers:
+  gitLabConnectionConfig:
     servers:
       - name: "GitLab"
         serverUrl: "http://localhost:8081"  # Внешний доступ к GitLab
