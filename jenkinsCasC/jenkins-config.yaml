@@ -39,7 +39,7 @@ credentials:
       - string:
           id: "gitlab-api-token"
           scope: GLOBAL
-          secret: "your-gitlab-api-token"
+          secret: "glpat-1ryEmtEWTLpf1U-vBLga"
 jenkins:
   agentProtocols:
   - "JNLP4-connect"
