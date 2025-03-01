@@ -41,6 +41,11 @@ credentials:
           scope: GLOBAL
           secret: "glpat-1ryEmtEWTLpf1U-vBLga"
 jenkins:
+  gitlab:
+    connections:
+      - name: "GitLab Server"
+        url: "http://localhost:8081" # Внешний доступ к GitLab
+        credentialsId: "gitlab-api-token"
   crumbIssuer:
     standard:
       excludeClientIPFromCrumb: false
@@ -129,13 +134,6 @@ security:
     sshHostKeyVerificationStrategy: "knownHostsFileVerificationStrategy"
   globalJobDslSecurityConfiguration:
     useScriptSecurity: true
-unclassified:
-  gitLabConnectionConfig:
-    servers:
-      - name: "GitLab"
-        serverUrl: "http://localhost:8081"  # Внешний доступ к GitLab
-        credentialsId: "gitlab-token"       # ID токена для авторизации
-        clientBuilderId: "auto"
   buildDiscarders:
     configuredBuildDiscarders:
     - "jobBuildDiscarder"
