@@ -90,11 +90,14 @@ jenkins:
   scmCheckoutRetryCount: 0
   securityRealm:
     local:
-      allowsSignup: false
-      enableCaptcha: false
       users:
-            - id: jenkins-admin
-              password: admin
+        - name: "admin"
+          password: "admin_password"
+          permissions:
+            - "Administer"
+    authorizationStrategy:
+      fullControlOnceLoggedIn:
+        allowAnonymousRead: false
   slaveAgentPort: 50000
   systemMessage: "CasC enabled!"
   updateCenter:
