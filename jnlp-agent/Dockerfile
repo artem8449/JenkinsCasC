@@ -22,4 +22,4 @@ RUN apt-get update && apt-get install -y wget unzip curl && \
     rm /tmp/id_rsa && \
     chmod +x /usr/local/bin/start-agent.sh
 
-ENTRYPOINT ["/usr/local/bin/start-agent.sh"
+ENTRYPOINT ["/usr/local/bin/start-agent.sh"]
