@@ -93,8 +93,6 @@ jenkins:
       users:
         - name: "admin"
           password: "admin_password"
-          permissions:
-            - "Administer"
   authorizationStrategy:
     fullControlOnceLoggedIn:
       allowAnonymousRead: false
