@@ -8,4 +8,3 @@ pipeline-utility-steps
 ssh-slaves
 gitlab-plugin
 gitlab-api
-gitlab-hook
