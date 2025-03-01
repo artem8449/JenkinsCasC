@@ -41,9 +41,6 @@ credentials:
           scope: GLOBAL
           secret: "glpat-1ryEmtEWTLpf1U-vBLga"
 jenkins:
-  agentProtocols:
-  - "JNLP4-connect"
-  - "Ping"
   crumbIssuer:
     standard:
       excludeClientIPFromCrumb: false
