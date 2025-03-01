@@ -110,17 +110,17 @@ globalCredentialsConfiguration:
   configuration:
     providerFilter: "none"
     typeFilter: "none"
-gitlab:
-  connections:
-    - name: "GitLab Server"
-      url: "http://localhost:8081" # Внешний доступ к GitLab
-      credentialsId: "gitlab-api-token"
 appearance:
   prism:
     theme: PRISM
   themeManager:
     disableUserThemes: false
     theme: "darkSystem"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
 jobs:
   - script: >
       multibranchPipelineJob('master-git') {
